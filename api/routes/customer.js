@@ -16,7 +16,21 @@ router.get("/", (req, res, next) => {
           error: err
         });
       });
-  });
+});
+
+router.get("/limit", (req, res, next) => {
+  Customer.find().sort({employees: -1}).limit(4).exec()
+    .then(docs => {
+        console.log(docs);
+        res.status(200).json(docs);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({
+        error: err
+      });
+    });
+});
 
 router.post('/', (req, res, next) => {
     const customer = new Customer({
