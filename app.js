@@ -5,10 +5,7 @@ const mongoose = require("mongoose");
 
 
 mongoose.connect(
-   `mongodb://<umbrella>:<SuperSecrect6>@ds253468.mlab.com:53468/auth`,
-    {
-      useMongoClient: true
-    }
+   `mongodb://umbrella:SuperSecrect6@ds253468.mlab.com:53468/auth`
 );
   
 

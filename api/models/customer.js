@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const customerSchema = mongoose.Schema({
-    id: mongoose.Schema.Types.ObjectId,
+    _id: mongoose.Schema.Types.ObjectId,
     name: String,
     personOfContact: String,
     telephone: Number,
@@ -9,4 +9,4 @@ const customerSchema = mongoose.Schema({
     employees: Number
 });
 
-module.exports = mongoose.model('Product', customerSchema);
+module.exports = mongoose.model('Customer', customerSchema);
